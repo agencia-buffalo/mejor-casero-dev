@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .mc-btn {
+        @apply inline-flex items-center justify-center rounded-full px-5 py-2 text-base font-medium outline;
+    }
+    .mc-btn-primary {
+        @apply bg-mc-primary hover:bg-mc-primary-dark text-white outline-none;
+    }
+    .mc-btn-primary-outline {
+        @apply bg-transparent hover:bg-mc-primary text-mc-primary hover:text-white outline-mc-primary -outline-offset-1;
+    }
+    .mc-btn-secondary {
+        @apply bg-mc-secondary hover:bg-mc-secondary-dark text-white outline-none;
+    }
+    .mc-btn-secondary-outline {
+        @apply bg-transparent hover:bg-mc-secondary text-mc-secondary hover:text-white outline-mc-secondary -outline-offset-1;
+    }
+}
