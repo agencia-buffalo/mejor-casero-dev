@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mejor Casero</title>
+    <title>Mejor Casero | Home</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="description" content="Mejor Casero. Viandas únicas y saludables.">
     <meta name="keywords" content="viandas, unicas, saludables">
@@ -29,11 +29,11 @@
                 <div id="menu" class="flex items-center gap-x-5 md:gap-x-8">
 
                     <div class="hidden lg:flex md:gap-x-6 font-navbar">
-                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="#">Precios</a>
-                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="#">Nutricionistas</a>
-                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="#">Contacto</a>
-                        <a class="mc-btn mc-btn-primary" href="#" target="_blank">Generar plan con IA</a>
-                        <a class="mc-btn mc-btn-secondary-outline" href="#" target="_blank"><span>Descargar App</span></a>
+                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="./src/pages/precios.html">Precios</a>
+                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="./src/pages/nutricionistas.html">Nutricionistas</a>
+                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="#">Plan Empresa</a>
+                        <a class="mc-btn mc-btn-primary" href="./src/pages/plan-ia.html" target="_self">Generar plan con IA</a>
+                        <a class="mc-btn mc-btn-secondary-outline" href="https://play.google.com/" target="_blank"><span>Descargar App</span></a>
                     </div>
 
                     <div class="-mr-1 lg:hidden">
@@ -85,7 +85,7 @@
 
                     <div class="hidden md:block py-8">
                         <img src="./src/img/intro-03.png" alt="hoja" class="absolute w-[160px] top-0 left-40">
-                        <svg class="ml-10" width="100%" height="auto" viewBox="0 0 635 117" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="ml-10 w-full h-auto" viewBox="0 0 635 117" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M600 116H475.07C472.512 116 470.109 114.778 468.604 112.711L447.896 84.2891C446.391 82.2224 443.988 81 441.43 81L296 81" stroke="url(#paint0_linear_525_212)"/>
                             <circle cx="293" cy="81" r="3.5" stroke="#FB7447"/>
                                 <path d="M635 77H510.07C507.512 77 505.109 75.7776 503.604 73.7109L482.896 45.2891C481.391 43.2224 478.988 42 476.43 42H37.3883C34.9334 42 32.6144 40.8729 31.0977 38.9426L6 7" stroke="url(#paint1_linear_525_212)"/>
@@ -124,8 +124,9 @@
             </div>
         </section>
 
-        <section id="comoFunciona" class="px-4 py-4 lg:-mt-16">
-            <div class="container mx-auto max-w-6xl mb-5 md:mb-20">
+        <section id="comoFunciona" class="px-4 py-4 lg:-mt-16 relative">
+
+            <div class="container mx-auto max-w-6xl mb-5 md:mb-24">
 
                 <div class="md:hidden mb-10">
                     <svg xmlns="http://www.w3.org/2000/svg" width="228" height="21" viewBox="0 0 228 21" fill="none" class="mx-auto">
@@ -139,6 +140,10 @@
                             </linearGradient>
                         </defs>
                     </svg>
+                </div>
+
+                <div class="hidden md:block absolute left-0 -top-28">
+                    <img src="./src/img/como-funciona-hojas.png" alt="hojas" class="w-[250px] h-auto">
                 </div>
                 
                 <div class="mb-12">
@@ -186,14 +191,22 @@
 
             </div>
 
-            <div class="mx-auto max-w-6xl bg-mc-primary rounded-xl px-5 py-10 md:flex flex-row-reverse items-center md:px-16 gap-14">
+            <div class="mx-auto max-w-6xl bg-mc-primary rounded-xl px-5 py-10 md:flex flex-row-reverse items-center md:pl-24 md:pr-16 gap-14 relative mb-6">
+                <div class="hidden lg:block absolute -left-12 -top-20">
+                    <img src="./src/img/como-funciona-ia-02.svg" alt="IA">
+                </div>
                 <div class="mb-5 mx-auto flex-none md:w-80 md:mb-0">
-                    <img src="./src/img/como-funciona-ia.png" alt="IA" class="mx-auto">
+                    <!-- <img src="./src/img/como-funciona-ia.png" alt="IA" class="lg:hidden mx-auto"> -->
+                    <!-- <img src="./src/img/como-funciona-ia-desk.png" alt="IA" class="hidden lg:block mx-auto"> -->
+                    <iframe src="https://lottie.host/embed/34e655f2-d4b6-4cfb-94cc-0ce1bf19e751/bxWrpgFT8c.json" class="scale-110 w-full max-w-80 lg:scale-[2] lg:relative top-5 right-20"></iframe>
                 </div>
                 <div class="text-center md:text-left flex-auto">
                     <h3 class="text-3xl text-white font-semibold mb-8 md:text-[40px]">Usamos IA para elaborar planes que se adapten a tus necesidades y objetivos.</h3>
                     <a href="#" target="_blank" class="mc-btn mc-btn-secondary">Generar nuevo plan</a>
                 </div>
+                <!-- <div class="hidden lg:block absolute right-80 -bottom-9">
+                    <img src="./src/img/como-funciona-ia-03.svg" alt="IA">
+                </div> -->
             </div>
 
         </section>
@@ -211,7 +224,7 @@
                         </div>
                         <h2 class="text-3xl font-semibold mb-9 md:text-4xl">¿Por qué elegirnos?</h2>
                         <div>
-                            <ul class="list-image-[url(./src/img/icon-list.svg)] list-inside">
+                            <ul class="list-image-[url(../src/img/icon-list.svg)] list-inside *:mb-1">
                                 <li>Disfruta de <strong>comida fresca y saludable</strong> todos los días.</li>
                                 <li>Un <strong>chef exclusivo</strong> se encargará de preparar tus platos.</li>
                                 <li>Gestiona tu plan a través de <strong>nuestra aplicación</strong> dedicada.</li>
@@ -230,8 +243,10 @@
         <section id="nuestrosPlatos" class="px-4 py-4">
             <div class="container mx-auto max-w-6xl">
 
-                <div class="mb-20">
-                    <h2 class="text-4xl font-semibold md:text-center">Descubre nuestros platos <span class="before:content-['desde']"> $365</span></h2>
+                <div class="mb-28">
+                    <h2 class="text-4xl font-semibold leading-tight md:text-center lg:text-5xl">
+                        Descubre nuestros platos <span class="lg:hidden">desde</span> <span class="bg-mc-primary text-mc-primary-light font-bold rounded-md px-2 py-1 lg:relative lg:before:content-['desde'] before:absolute before:text-sm before:font-normal before:bg-mc-secondary before:px-2 before:py-0 before:rounded-md before:-top-3 before:left-9">$365</span>
+                    </h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6"><!-- items / articles -->
                     <article class="bg-white rounded-2xl shadow-xl p-4 text-center relative">
@@ -258,7 +273,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="bg-white rounded-2xl shadow-xl p-4 text-center relative">
+                    <article class="bg-white rounded-2xl shadow-xl p-4 text-center relative hidden md:block">
                         <div class="-mt-14 relative">
                             <img src="./src/img/nuestros-platos-02.png" alt="Mix de verdes con atún" class="relative z-10 scale-125">
                             <div class="absolute bottom-4 left-4 z-0">
@@ -282,7 +297,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="bg-white rounded-2xl shadow-xl p-4 text-center relative">
+                    <article class="bg-white rounded-2xl shadow-xl p-4 text-center relative hidden md:block">
                         <div class="-mt-14 relative">
                             <img src="./src/img/nuestros-platos-03.png" alt="Mix de verdes con atún" class="relative z-10 scale-125">
                             <div class="absolute bottom-4 left-4 z-0">
@@ -307,7 +322,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="bg-white rounded-2xl shadow-xl p-4 text-center relative">
+                    <article class="bg-white rounded-2xl shadow-xl p-4 text-center relative hidden md:block">
                         <div class="-mt-14 relative">
                             <img src="./src/img/nuestros-platos-04.png" alt="Mix de verdes con atún" class="relative z-10 scale-125">
                             <div class="absolute bottom-4 left-4 z-0">
@@ -333,16 +348,16 @@
                     </article>
                 </div>
                 
-                <div class="mt-14">
-                    <h4 class="text-lg font-normal mb-5 md:text-center md:text-xl">Buscamos la excelencia, desde los ingredientes que elegimos hasta cómo te lo entregamos.</h4>
+                <div class="mt-14 mb-14">
+                    <h4 class="text-lg font-normal mb-6 md:text-center md:text-xl">Buscamos la excelencia, desde los ingredientes que elegimos hasta cómo te lo entregamos.</h4>
                     <a href="#" target="_self" class="mc-btn mc-btn-primary w-full md:hidden">Ver precios y planes</a>
 
-                    <div class="hidden md:flex justify-center gap-x-5">
+                    <div class="hidden md:flex justify-center gap-x-5 lg:bg-[url('../src/img/nuestros-platos-05.svg')] bg-no-repeat bg-center bg-contain">
                         <div>
-                            <a href="#" target="_blank" class="mc-btn mc-btn-primary">Generar con IA</a>
+                            <a href="#" target="_blank" class="mc-btn mc-btn-primary min-w-60">Generar con IA</a>
                         </div>
                         <div>
-                            <a href="#" target="_blank" class="mc-btn mc-btn-primary-outline">Ver precios y planes</a>
+                            <a href="#" target="_blank" class="mc-btn mc-btn-primary-outline min-w-60">Ver precios y planes</a>
                         </div>
                     </div>
                 </div>
@@ -362,10 +377,10 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col gap-y-6 text-center md:flex-row md:gap-x-6 md:mb-32"><!-- planes x 3 -->
+                <div class="flex flex-col gap-y-6 text-center md:flex-row md:gap-x-6 md:mb-36"><!-- planes x 3 -->
                     <div class="bg-mc-primary-light rounded-xl rounded-tl-[52px] border border-solid border-mc-primary/50 p-4 shadow-xl">
-                        <div>
-                            <img src="" alt="IA">
+                        <div class="mb-5">
+                            <img src="./src/img/diferentes-planes-ia.png" alt="IA" class="w-full drop-shadow-[0_0_1px_rgba(254,111,78,1)]">
                         </div>
                         <div>
                             <h3 class="text-3xl font-semibold text-mc-primary mb-3">IA</h3>
@@ -374,8 +389,8 @@
                         </div>
                     </div>
                     <div class="bg-mc-primary-light rounded-xl rounded-tl-[52px] border border-solid border-mc-primary/50 p-4 shadow-xl">
-                        <div>
-                            <img src="" alt="Nutrición">
+                        <div class="mb-5">
+                            <img src="./src/img/diferentes-planes-nutricion.png" alt="Nutrición" class="w-full drop-shadow-[0_0_1px_rgba(254,111,78,1)]">
                         </div>
                         <div>
                             <h3 class="text-3xl font-semibold text-mc-primary mb-3">Nutricionista</h3>
@@ -384,8 +399,8 @@
                         </div>
                     </div>
                     <div class="bg-mc-primary-light rounded-xl rounded-tl-[52px] border border-solid border-mc-primary/50 p-4 shadow-xl">
-                        <div>
-                            <img src="" alt="Empresas">
+                        <div class="mb-5">
+                            <img src="./src/img/diferentes-planes-empresa.png" alt="Empresas" class="w-full drop-shadow-[0_0_1px_rgba(254,111,78,1)]">
                         </div>
                         <div>
                             <h3 class="text-3xl font-semibold text-mc-primary mb-3">Empresas</h3>
@@ -395,24 +410,28 @@
                     </div>
                 </div>
 
-                <div class="mx-auto bg-mc-accent rounded-2xl p-8 my-10 md:flex md:min-h-64">
-                    
+                <div class="mx-auto bg-mc-accent rounded-2xl p-8 my-10 md:flex md:min-h-64 relative">
+
+                    <img src="./src/img/descarga-app-hoja-01.png" alt="hoja" class="hidden lg:block absolute -top-16 right-[40%]">
+
                     <div class="flex flex-col gap-y-4 flex-none md:w-1/2">
-                        <h3 class="text-white text-4xl font-semibold">Descarga nuestra app</h3>
+                        <h3 class="text-white text-4xl font-semibold lg:text-[46px]">Descarga nuestra app</h3>
                         <p class="text-white text-lg font-normal leading-tight">Desde la App podés cancelar tus platos y cambiar tu dirección de entrega</p>
-                        <div>
-                            <div>
+                        <div class="lg:flex gap-5">
+                            <div class="mb-4">
                                 <a href="#" target="_blank">
-                                    <img src="" alt="icon google play">
+                                    <img src="./src/img/btn-google-play.svg" alt="icon google play" class="w-full h-auto">
                                 </a>
                             </div>
-                            <div>
+                            <div class="mb-4">
                                 <a href="#" target="_blank">
-                                    <img src="" alt="icon app store">
+                                    <img src="./src/img/btn-app-store.svg" alt="icon app store" class="w-full h-auto">
                                 </a>
                             </div>
                         </div>
                     </div>
+
+                    <img src="./src/img/descarga-app-hoja-02.png" alt="hoja" class="hidden lg:block absolute left-0 -bottom-[80px]">
 
                     <div class="-mb-16 md:hidden">
                         <img src="./src/img/descarga-app-img.png" alt="">
@@ -431,30 +450,33 @@
         <section id="enNumeros" class="px-4 py-4">
             <div class="container mx-auto max-w-6xl mt-12 md:mt-24 mb-16">
 
-                <div class="mb-5">
+                <div class="hidden lg:block mb-10 bg-[url('../src/img/en-numeros-01.svg')] bg-no-repeat bg-bottom">
                     <h2 class="text-2xl font-semibold text-center md:text-4xl">Mejor Casero en números</h2>
                 </div>
 
                 <div class="grid grid-cols-2 gap-3 md:grid-cols-5">
-                    <div class="border-2 border-solid rounded-xl border-mc-primary-light p-4 text-center">
+                    <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
                         <h3 class="text-4xl font-bold text-mc-primary/60">+ 300</h3>
                         <p>platos entregados semanalmente</p>
                     </div>
-                    <div class="border-2 border-solid rounded-xl border-mc-primary-light p-4 text-center">
+                    <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
                         <h3 class="text-4xl font-bold text-mc-primary/60">+ 190</h3>
                         <p class="text-sm">clientes que viven la experiencia</p>
                     </div>
-                    <div class="border-2 border-solid rounded-xl border-mc-primary-light p-4 text-center">
+                    <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
                         <h3 class="text-4xl font-bold text-mc-primary/60">+ 10</h3>
                         <p class="text-sm">nutricionistas asociadas</p>
                     </div>
-                    <div class="border-2 border-solid rounded-xl border-mc-primary-light p-4 text-center">
+                    <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
                         <h3 class="text-4xl font-bold text-mc-primary/60">+ 5</h3>
                         <p class="text-sm">cheffs</p>
                     </div>
-                    <div class="border-2 border-solid rounded-xl border-mc-primary-light p-4 text-center">
+                    <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
                         <h3 class="text-4xl font-bold text-mc-primary/60">+ 3500</h3>
                         <p class="text-sm">kilos de plásticos no volcados al planeta</p>
+                    </div>
+                    <div class="md:hidden">
+                        <img src="./src/img/en-numeros-02.png" alt="hoja">
                     </div>
                 </div>
 
@@ -468,20 +490,20 @@
             
             <div class="flex flex-col md:flex-row pt-12 pb-12 text-white gap-4 text-lg">
                 <div class="flex-auto"> <!-- logo -->
-                    <div>
+                    <div class="mb-10">
                         <img src="./src/img/footer-logo.svg" alt="logo mejor casero" class="w-full max-w-[220px]">
                     </div>
                     <div>
-                        <p class="font-semibold">Descarga nuestra app</p>
-                        <div>
+                        <p class="font-semibold mb-3">Descarga nuestra app</p>
+                        <div class="flex gap-4 w-full max-w-60">
                             <div>
                                 <a href="#">
-                                    <img src="" alt="">
+                                    <img src="./src/img/btn-google-play.svg" alt="Google Play" class="w-full">
                                 </a>
                             </div>
                             <div>
                                 <a href="#">
-                                    <img src="" alt="">
+                                    <img src="./src/img/btn-app-store.svg" alt="App Store" class="w-full">
                                 </a>
                             </div>
                         </div>

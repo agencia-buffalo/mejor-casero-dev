@@ -4,7 +4,7 @@
 
 @layer components {
     .mc-btn {
-        @apply inline-flex items-center justify-center rounded-full px-5 py-2 text-base font-medium outline;
+        @apply inline-flex items-center justify-center rounded-full px-8 py-2 text-base font-medium outline;
     }
     .mc-btn-primary {
         @apply bg-mc-primary hover:bg-mc-primary-dark text-white outline-none;
@@ -18,4 +18,16 @@
     .mc-btn-secondary-outline {
         @apply bg-transparent hover:bg-mc-secondary text-mc-secondary hover:text-white outline-mc-secondary -outline-offset-1;
     }
+    .mc-btn-form {
+        @apply bg-mc-primary hover:bg-mc-primary-dark text-white hover:text-white font-medium text-lg rounded-lg px-4 py-3;
+    }
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    min-height: -webkit-fill-available;
+    min-height: 54px;
 }
