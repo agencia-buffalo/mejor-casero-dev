@@ -803,6 +803,14 @@ video {
   top: 0.5rem;
 }
 
+.left-64 {
+  left: 16rem;
+}
+
+.left-72 {
+  left: 18rem;
+}
+
 .-z-10 {
   z-index: -10;
 }
@@ -979,6 +987,30 @@ video {
   margin-top: -1.5rem;
 }
 
+.-mr-10 {
+  margin-right: -2.5rem;
+}
+
+.ml-\[150px\] {
+  margin-left: 150px;
+}
+
+.ml-\[160px\] {
+  margin-left: 160px;
+}
+
+.ml-\[170px\] {
+  margin-left: 170px;
+}
+
+.ml-\[190px\] {
+  margin-left: 190px;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .block {
   display: block;
 }
@@ -1139,6 +1171,22 @@ video {
   max-width: 28rem;
 }
 
+.max-w-\[85\%\] {
+  max-width: 85%;
+}
+
+.max-w-\[80\%\] {
+  max-width: 80%;
+}
+
+.max-w-\[90\%\] {
+  max-width: 90%;
+}
+
+.max-w-\[99\%\] {
+  max-width: 99%;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -1260,6 +1308,10 @@ video {
 
 .gap-1 {
   gap: 0.25rem;
+}
+
+.gap-16 {
+  gap: 4rem;
 }
 
 .gap-x-5 {
@@ -1432,8 +1484,40 @@ video {
   background-image: url('../src/img/en-numeros-01.svg');
 }
 
+.bg-\[url\(\'\.\.\/img\/empresas-info-bg\.png\'\)\] {
+  background-image: url('../img/empresas-info-bg.png');
+}
+
+.bg-\[url\(\'\.\.\/src\/img\/empresas-info-bg\.png\'\)\] {
+  background-image: url('../src/img/empresas-info-bg.png');
+}
+
+.bg-\[url\(\'\.\/img\/empresas-info-bg\.png\'\)\] {
+  background-image: url('./img/empresas-info-bg.png');
+}
+
+.bg-\[url\(\'\.\/img\/empresas-info-bg\.svg\'\)\] {
+  background-image: url('./img/empresas-info-bg.svg');
+}
+
+.bg-\[url\(\'\.\/img\/empresas-info-menu\.png\'\)\] {
+  background-image: url('./img/empresas-info-menu.png');
+}
+
+.bg-\[url\(\'\.\/img\/empresas-info-menu-bg\.png\'\)\] {
+  background-image: url('./img/empresas-info-menu-bg.png');
+}
+
 .bg-contain {
   background-size: contain;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-auto {
+  background-size: auto;
 }
 
 .bg-bottom {
@@ -1442,6 +1526,10 @@ video {
 
 .bg-center {
   background-position: center;
+}
+
+.bg-\[90\%\] {
+  background-position: 90%;
 }
 
 .bg-no-repeat {
@@ -1479,6 +1567,14 @@ video {
 
 .p-2 {
   padding: 0.5rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-5 {
+  padding: 1.25rem;
 }
 
 .px-2 {
@@ -2149,6 +2245,14 @@ select {
 
   .lg\:pt-4 {
     padding-top: 1rem;
+  }
+
+  .lg\:pt-5 {
+    padding-top: 1.25rem;
+  }
+
+  .lg\:pt-10 {
+    padding-top: 2.5rem;
   }
 
   .lg\:text-left {
