@@ -9,48 +9,101 @@
     <meta name="keywords" content="viandas, unicas, saludables">
     <link rel="stylesheet" href="./src/output.css">
 </head>
-<body class="bg-[#FFFEFA] text-mc-base font-body">
+<body class="text-mc-base font-body bg-[#FFFEFA]
+bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
 
-    <!-- prefijo mc- (mejor casero) clases propias -->
     <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch -->
       
     <header id="headerContent" class="px-4 py-9">
         <div class="container mx-auto max-w-6xl">
-            <nav class="relative z-50 flex justify-between">
-                
-                <div id="logo" class="flex items-center md:gap-x-12">
+
+            <nav class="relative flex justify-between">
+                <!-- logo -->
+                <div id="logo" class="flex items-center md:gap-x-12 z-50 top-[39px]">
                     <div>
                         <a aria-label="Home" href="./">
                             <img src="./src/img/navbar-logo.svg" alt="mejor casero" class="w-[157px] h-auto">
                         </a>
                     </div>
                 </div>
-                
+                <!-- menu -->
                 <div id="menu" class="flex items-center gap-x-5 md:gap-x-8">
 
+                    <!-- menu desktop -->
                     <div class="hidden lg:flex md:gap-x-6 font-navbar">
-                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="./src/pages/precios.html">Precios</a>
-                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="./src/pages/nutricionistas.html">Nutricionistas</a>
-                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="./src/pages/empresas.html">Plan Empresa</a>
+                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="./src/pages/precios.html" target="_self">Precios</a>
+                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="./src/pages/nutricionistas.html" target="_self">Nutricionistas</a>
+                        <a class="inline-block px-2 py-1 text-lg text-black hover:text-mc-primary" href="./src/pages/empresas.html" target="_self">Plan Empresa</a>
                         <a class="mc-btn mc-btn-primary" href="./src/pages/plan-ia.html" target="_self">Generar plan con IA</a>
                         <a class="mc-btn mc-btn-secondary-outline" href="https://play.google.com/" target="_blank"><span>Descargar App</span></a>
                     </div>
 
-                    <div class="-mr-1 lg:hidden">
-                        <div data-headlessui-state="">
-                            <button class="relative z-10 flex h-8 w-8 items-center justify-center ui-not-focus-visible:outline-none" aria-label="Toggle Navigation" type="button" aria-expanded="false" data-headlessui-state="" id="headlessui-popover-button-:R2v6fja:">
-                                <svg aria-hidden="true" class="h-3.5 w-3.5 overflow-visible stroke-slate-700" fill="none" stroke-width="2" stroke-linecap="round"><path d="M0 1H14M0 7H14M0 13H14" class="origin-center transition"></path><path d="M2 2L12 12M12 2L2 12" class="origin-center transition scale-90 opacity-0"></path></svg>
-                            </button>
-                        </div>
+                    <!-- btn menu mobile open -->
+                    <div class="lg:hidden z-50 right-4 top-9 iconMenuMobile">
+                        <button id="btnMenuMobileOpen" type="button" aria-label="Open" aria-expanded="false" class="flex h-12 w-12 items-center justify-center">
+                            <svg class="iconOpen" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                                <circle cx="22.5" cy="22.5" r="22.5" fill="black"/>
+                                <path d="M33.1014 13H12.63C11.7298 13 11 13.7298 11 14.63C11 15.5302 11.7298 16.26 12.63 16.26H33.1014C34.0016 16.26 34.7314 15.5302 34.7314 14.63C34.7314 13.7298 34.0016 13 33.1014 13Z" fill="white"/>
+                                <path d="M37.37 21H8.63C7.72978 21 7 21.7298 7 22.63C7 23.5302 7.72978 24.26 8.63 24.26H37.37C38.2702 24.26 39 23.5302 39 22.63C39 21.7298 38.2702 21 37.37 21Z" fill="white"/>
+                                <path d="M33.1014 29.52H12.63C11.7298 29.52 11 30.2498 11 31.15C11 32.0502 11.7298 32.78 12.63 32.78H33.1014C34.0016 32.78 34.7314 32.0502 34.7314 31.15C34.7314 30.2498 34.0016 29.52 33.1014 29.52Z" fill="white"/>
+                            </svg>
+                            <svg class="iconClose hidden" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" fill="none">
+                                <circle cx="22.5" cy="22.5" r="22.5" fill="black"/>
+                                <path d="M33.78 31.4748L13.4578 11.1526C12.8212 10.516 11.7891 10.516 11.1526 11.1526C10.516 11.7891 10.516 12.8212 11.1526 13.4578L31.4748 33.78C32.1114 34.4166 33.1435 34.4166 33.78 33.78C34.4166 33.1434 34.4166 32.1114 33.78 31.4748Z" fill="white"/>
+                                <path d="M11.1526 31.4748L31.4749 11.1526C32.1114 10.516 33.1435 10.516 33.78 11.1526C34.4166 11.7891 34.4166 12.8212 33.78 13.4578L13.4578 33.78C12.8212 34.4166 11.7892 34.4166 11.1526 33.78C10.5161 33.1434 10.5161 32.1114 11.1526 31.4748Z" fill="white"/>
+                            </svg>
+                        </button>
                     </div>
 
                 </div>
-
             </nav>
+
         </div>
     </header>
 
-    <main id="mainContent">
+    <!-- menu mobile -->
+    <div id="menuMobile" class="hidden w-full max-w-full px-4 pb-9 pt-[120px] fixed top-0 z-40 h-[calc(100vh)]"
+    style="background: #FFFEFA radial-gradient(50% 50% at 50% 50%, rgba(255, 75, 0, 0.08) 0%, rgba(255, 75, 0, 0.00) 100%);">
+        <div class="flex flex-col h-full justify-between gap-4">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="./index.html" target="_self" class="block font-semibold text-xl p-4 border-b border-mc-primary hover:text-mc-primary">Home</a>
+                    </li>
+                    <li>
+                        <a href="./src/pages/plan-ia.html" target="_self" class="block font-semibold text-xl p-4 border-b border-mc-primary hover:text-mc-primary">Generar Plan con IA</a>
+                    </li>
+                    <li>
+                        <a href="./src/pages/precios.html" target="_self" class="block font-semibold text-xl p-4 border-b border-mc-primary hover:text-mc-primary">Precios</a>
+                    </li>
+                    <li>
+                        <a href="./src/pages/nutricionistas.html" target="_self" class="block font-semibold text-xl p-4 border-b border-mc-primary hover:text-mc-primary">Nutricionistas</a>
+                    </li>
+                    <li>
+                        <a href="./src/pages/empresas.html" target="_self" class="block font-semibold text-xl p-4 hover:text-mc-primary">Plan Empresas</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- descarga -->
+            <div class="flex flex-col items-center gap-4">
+                <div class="font-semibold text-lg">Descarga nuestra app</div>
+                <div class="flex gap-4">
+                    <div>
+                        <a href="#" target="_blank" class="hover:drop-shadow-xl">
+                            <img src="./src/img/btn-google-play.svg" alt="GooglePlay" class="w-full max-w-32">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank" class="hover:drop-shadow-xl">
+                            <img src="./src/img/btn-app-store.svg" alt="AppStore" class="w-full max-w-32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="mainContent" class="overflow-hidden">
 
         <section id="homeIntro" class="px-4 py-4">
             <div class="container mx-auto max-w-6xl md:flex items-start relative">
@@ -73,7 +126,7 @@
                     </svg>                            
                 </div>
 
-                <div class="absolute -top-8 right-0 -z-10 md:top-[175px] md:-right-14">
+                <div class="absolute -top-4 right-0 -z-10 md:top-[175px] md:-right-14">
                     <img src="./src/img/intro-02.png" alt="hoja" class="w-[62px] md:w-[98px] h-auto">
                 </div>
 
@@ -106,8 +159,8 @@
                     <h1 class="font-extrabold text-mc-base text-[40px] leading-tight mb-1 md:text-6xl md:pr-5">Viandas únicas y saludables</h1>
                     <p class="text-lg mb-7 md:text-2xl">con el toque propio de nuestros chefs</p>
                     <div class="flex flex-col gap-4 md:flex-row">
-                        <a href="#" class="mc-btn mc-btn-primary">Generar plan con IA</a>
-                        <a href="#" class="mc-btn mc-btn-primary-outline">Cómo Funciona</a>
+                        <a href="./src/pages/plan-ia.html" class="mc-btn mc-btn-primary">Generar plan con IA</a>
+                        <a href="#comoFunciona" class="mc-btn mc-btn-primary-outline">Cómo Funciona</a>
                     </div>
 
                 </div>
@@ -190,19 +243,19 @@
                 </div>
 
             </div>
-
+            
             <div class="mx-auto max-w-6xl bg-mc-primary rounded-xl px-5 py-10 md:flex flex-row-reverse items-center md:pl-24 md:pr-16 gap-14 relative mb-6">
                 <div class="hidden lg:block absolute -left-12 -top-20">
                     <img src="./src/img/como-funciona-ia-02.svg" alt="IA">
                 </div>
-                <div class="mb-5 mx-auto flex-none md:w-80 md:mb-0">
+                <div class="mb-12 mx-auto flex-none md:w-80 md:mb-0">
                     <!-- <img src="./src/img/como-funciona-ia.png" alt="IA" class="lg:hidden mx-auto"> -->
                     <!-- <img src="./src/img/como-funciona-ia-desk.png" alt="IA" class="hidden lg:block mx-auto"> -->
-                    <iframe src="https://lottie.host/embed/34e655f2-d4b6-4cfb-94cc-0ce1bf19e751/bxWrpgFT8c.json" class="scale-110 w-full max-w-80 lg:scale-[2] lg:relative top-5 right-20"></iframe>
+                    <iframe src="https://lottie.host/embed/34e655f2-d4b6-4cfb-94cc-0ce1bf19e751/bxWrpgFT8c.json" class="scale-125 w-full max-w-80 relative right-11 lg:scale-[2] lg:top-5 lg:right-20"></iframe>
                 </div>
                 <div class="text-center md:text-left flex-auto">
                     <h3 class="text-3xl text-white font-semibold mb-8 md:text-[40px]">Usamos IA para elaborar planes que se adapten a tus necesidades y objetivos.</h3>
-                    <a href="#" target="_blank" class="mc-btn mc-btn-secondary">Generar nuevo plan</a>
+                    <a href="./src/pages/plan-ia.html" target="_self" class="mc-btn mc-btn-secondary">Generar nuevo plan</a>
                 </div>
                 <!-- <div class="hidden lg:block absolute right-80 -bottom-9">
                     <img src="./src/img/como-funciona-ia-03.svg" alt="IA">
@@ -350,14 +403,14 @@
                 
                 <div class="mt-14 mb-14">
                     <h4 class="text-lg font-normal mb-6 md:text-center md:text-xl">Buscamos la excelencia, desde los ingredientes que elegimos hasta cómo te lo entregamos.</h4>
-                    <a href="#" target="_self" class="mc-btn mc-btn-primary w-full md:hidden">Ver precios y planes</a>
+                    <a href="./src/pages/precios.html" target="_self" class="mc-btn mc-btn-primary w-full md:hidden">Ver precios y planes</a>
 
                     <div class="hidden md:flex justify-center gap-x-5 lg:bg-[url('../src/img/nuestros-platos-05.svg')] bg-no-repeat bg-center bg-contain">
                         <div>
-                            <a href="#" target="_blank" class="mc-btn mc-btn-primary min-w-60">Generar con IA</a>
+                            <a href="./src/pages/plan-ia.html" target="_self" class="mc-btn mc-btn-primary min-w-60">Generar con IA</a>
                         </div>
                         <div>
-                            <a href="#" target="_blank" class="mc-btn mc-btn-primary-outline min-w-60">Ver precios y planes</a>
+                            <a href="./src/pages/precios.html" target="_self" class="mc-btn mc-btn-primary-outline min-w-60">Ver precios y planes</a>
                         </div>
                     </div>
                 </div>
@@ -385,7 +438,7 @@
                         <div>
                             <h3 class="text-3xl font-semibold text-mc-primary mb-3">IA</h3>
                             <p class="text-xl font-medium mb-5">¿Querés armar tu plan con inteligencia artificial?</p>
-                            <a href="#" target="_blank" class="mc-btn mc-btn-primary w-full">Empeza con nosotros</a>
+                            <a href="./src/pages/plan-ia.html" target="_self" class="mc-btn mc-btn-primary w-full">Empeza con nosotros</a>
                         </div>
                     </div>
                     <div class="bg-mc-primary-light rounded-xl rounded-tl-[52px] border border-solid border-mc-primary/50 p-4 shadow-xl">
@@ -395,7 +448,7 @@
                         <div>
                             <h3 class="text-3xl font-semibold text-mc-primary mb-3">Nutricionista</h3>
                             <p class="text-xl font-medium mb-5">¿Querés armar tu plan con una nutricionista?</p>
-                            <a href="#" target="_blank" class="mc-btn mc-btn-primary w-full">Agendá tu consulta</a>
+                            <a href="./src/pages/nutricionistas.html" target="_self" class="mc-btn mc-btn-primary w-full">Agendá tu consulta</a>
                         </div>
                     </div>
                     <div class="bg-mc-primary-light rounded-xl rounded-tl-[52px] border border-solid border-mc-primary/50 p-4 shadow-xl">
@@ -405,7 +458,7 @@
                         <div>
                             <h3 class="text-3xl font-semibold text-mc-primary mb-3">Empresas</h3>
                             <p class="text-xl font-medium mb-5">¿Querés armar tu plan para empresas?</p>
-                            <a href="#" target="_blank" class="mc-btn mc-btn-primary w-full">Ver Plan Empresas</a>
+                            <a href="./src/pages/empresas.html" target="_self" class="mc-btn mc-btn-primary w-full">Ver Plan Empresas</a>
                         </div>
                     </div>
                 </div>
@@ -419,12 +472,12 @@
                         <p class="text-white text-lg font-normal leading-tight">Desde la App podés cancelar tus platos y cambiar tu dirección de entrega</p>
                         <div class="lg:flex gap-5">
                             <div class="mb-4">
-                                <a href="#" target="_blank">
+                                <a href="#" target="_blank" class="hover:drop-shadow-xl">
                                     <img src="./src/img/btn-google-play.svg" alt="icon google play" class="w-full h-auto">
                                 </a>
                             </div>
                             <div class="mb-4">
-                                <a href="#" target="_blank">
+                                <a href="#" target="_blank" class="hover:drop-shadow-xl">
                                     <img src="./src/img/btn-app-store.svg" alt="icon app store" class="w-full h-auto">
                                 </a>
                             </div>
@@ -456,23 +509,23 @@
 
                 <div class="grid grid-cols-2 gap-3 md:grid-cols-5">
                     <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
-                        <h3 class="text-4xl font-bold text-mc-primary/60">+ 300</h3>
+                        <h3 class="text-4xl font-bold text-mc-primary/60">+<span class="counter">300</span></h3>
                         <p>platos entregados semanalmente</p>
                     </div>
                     <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
-                        <h3 class="text-4xl font-bold text-mc-primary/60">+ 190</h3>
+                        <h3 class="text-4xl font-bold text-mc-primary/60">+<span class="counter">190</span></h3>
                         <p class="text-sm">clientes que viven la experiencia</p>
                     </div>
                     <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
-                        <h3 class="text-4xl font-bold text-mc-primary/60">+ 10</h3>
+                        <h3 class="text-4xl font-bold text-mc-primary/60">+<span class="counter">10</span></h3>
                         <p class="text-sm">nutricionistas asociadas</p>
                     </div>
                     <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
-                        <h3 class="text-4xl font-bold text-mc-primary/60">+ 5</h3>
+                        <h3 class="text-4xl font-bold text-mc-primary/60">+<span class="counter">5</span></h3>
                         <p class="text-sm">cheffs</p>
                     </div>
                     <div class="border-4 border-solid rounded-xl border-mc-primary-light p-4 text-center">
-                        <h3 class="text-4xl font-bold text-mc-primary/60">+ 3500</h3>
+                        <h3 class="text-4xl font-bold text-mc-primary/60">+<span class="counter">3500</span></h3>
                         <p class="text-sm">kilos de plásticos no volcados al planeta</p>
                     </div>
                     <div class="md:hidden">
@@ -485,52 +538,74 @@
 
     </main>
 
-    <footer id="footerContent" class="px-4 bg-mc-primary">
+    <footer id="footerContent" class="px-4 bg-mc-primary rounded-t-3xl">
         <div class="container mx-auto max-w-6xl">
             
-            <div class="flex flex-col md:flex-row pt-12 pb-12 text-white gap-4 text-lg">
-                <div class="flex-auto"> <!-- logo -->
+            <div class="flex flex-col items-center md:items-start md:flex-row pt-12 pb-12 text-white gap-4 text-lg">
+                <div class="flex-auto"> <!-- logo + apps -->
                     <div class="mb-10">
-                        <img src="./src/img/footer-logo.svg" alt="logo mejor casero" class="w-full max-w-[220px]">
+                        <img src="./src/img/footer-logo.svg" alt="logo mejor casero" class="w-full max-w-[220px] mx-auto md:mx-0">
                     </div>
-                    <div>
-                        <p class="font-semibold mb-3">Descarga nuestra app</p>
+                    <div class="mb-16 md:mb-0">
+                        <p class="font-semibold mb-3 text-center md:text-left">Descarga nuestra app</p>
                         <div class="flex gap-4 w-full max-w-60">
                             <div>
-                                <a href="#">
+                                <a href="#" target="_blank" class="hover:drop-shadow-xl">
                                     <img src="./src/img/btn-google-play.svg" alt="Google Play" class="w-full">
                                 </a>
                             </div>
                             <div>
-                                <a href="#">
+                                <a href="#" target="_blank" class="hover:drop-shadow-xl">
                                     <img src="./src/img/btn-app-store.svg" alt="App Store" class="w-full">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="flex-auto"> <!-- menu -->
+                <div class="flex-auto order-1 md:-order-none relative"> <!-- links -->
+                    <div class="hidden md:block absolute right-5 top-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2" height="148" viewBox="0 0 2 148" fill="none">
+                            <path d="M1 0.5V147.5" stroke="url(#paint0_linear_68_837)"/>
+                            <defs>
+                              <linearGradient id="paint0_linear_68_837" x1="1.5" y1="0.5" x2="1.5" y2="147.5" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFFEFA"/>
+                                <stop offset="1" stop-color="#999896" stop-opacity="0"/>
+                              </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
                     <div>
                         <div class="mb-6">
                             <p class="font-semibold">Menu Principal</p>
                         </div>
                         <div>
                             <ul>
-                                <li><a href="#" target="_self" class="hover:text-mc-base">Cómo funciona</a></li>
-                                <li><a href="#" target="_self" class="hover:text-mc-base">Precios</a></li>
-                                <li><a href="#" target="_self" class="hover:text-mc-base">Nutricionistas</a></li>
-                                <li><a href="#" target="_self" class="hover:text-mc-base">Plan de viandas</a></li>
-                                <li><a href="#" target="_self" class="hover:text-mc-base">Contacto</a></li>
+                                <li><a href="#comoFunciona" target="_self" class="hover:text-mc-base">Cómo funciona</a></li>
+                                <li><a href="./src/pages/precios.html" target="_self" class="hover:text-mc-base">Precios</a></li>
+                                <li><a href="./src/pages/nutricionistas.html" target="_self" class="hover:text-mc-base">Nutricionistas</a></li>
+                                <li><a href="./src/pages/plan-ia.html" target="_self" class="hover:text-mc-base">Plan de viandas</a></li>
+                                <li><a href="./src/pages/contacto.html" target="_self" class="hover:text-mc-base">Contacto</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="flex-auto"> <!-- apoyo -->
-                    <div class="mb-6">
+                <div class="flex-auto mb-10 relative"> <!-- apoyo -->
+                    <div class="hidden md:block absolute right-12 top-10">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="2" height="148" viewBox="0 0 2 148" fill="none">
+                            <path d="M1 0.5V147.5" stroke="url(#paint0_linear_68_837)"/>
+                            <defs>
+                              <linearGradient id="paint0_linear_68_837" x1="1.5" y1="0.5" x2="1.5" y2="147.5" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FFFEFA"/>
+                                <stop offset="1" stop-color="#999896" stop-opacity="0"/>
+                              </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <div class="mb-6 text-center md:text-left">
                         <p class="font-semibold">Contamos con el apoyo</p>
                     </div>
                     <div class="mb-6 pt-1">
-                        <img src="./src/img/footer-ande.svg" alt="logo ANDE">
+                        <img src="./src/img/footer-ande.svg" alt="logo ANDE" class="mx-auto md:mx-0">
                     </div>
                     <div>
                         <img src="./src/img/footer-ort-cie.svg" alt="logos ORT - CIE">
@@ -538,39 +613,40 @@
                 </div>
                 <div class="flex-none"> <!-- redes -->
                     <div class="mb-6">
-                        <p class="font-semibold uppercase">Síguenos en</p>
+                        <p class="font-semibold uppercase text-center md:text-left">Síguenos en</p>
                     </div>
                     <div class="flex gap-4 mb-6">
-                        <a href="#" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                        <a href="#" target="_blank" class="rounded-md hover:bg-mc-primary-dark/25">
+                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
                                 <rect x="0.5" y="0.5" width="51" height="51" rx="4.5" stroke="#FFFEFA"/><path fill-rule="evenodd" clip-rule="evenodd" d="M28.6854 37.9023V25.5875H32.3946L33.0004 20.1143H28.6854V17.4485C28.6854 16.0391 28.7212 14.6411 30.675 14.6411H32.6539V10.7279C32.6539 10.669 30.954 10.5361 29.2344 10.5361C25.643 10.5361 23.3942 12.8037 23.3942 16.9675V20.1143H19.4258V25.5875H23.3942V37.9023H28.6854Z" fill="#FFFEFA"/>
                             </svg>
                         </a>
-                        <a href="#" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                        <a href="#" target="_blank" class="rounded-md hover:bg-mc-primary-dark/25">
+                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
                                 <rect x="0.5" y="0.5" width="51" height="51" rx="4.5" stroke="#FFFEFA"/><path fill-rule="evenodd" clip-rule="evenodd" d="M21.0436 12.1473C19.0901 12.2354 17.397 12.713 16.0298 14.0744C14.6578 15.443 14.1862 17.1428 14.0978 19.076C14.0429 20.2825 13.7217 29.3979 14.6531 31.7884C15.2811 33.4011 16.5181 34.6411 18.1456 35.2712C18.905 35.5666 19.7719 35.7666 21.0436 35.8249C31.6766 36.3061 35.6181 36.0442 37.2802 31.7884C37.5751 31.0309 37.7781 30.1647 37.8343 28.8962C38.3202 18.236 37.7555 15.9254 35.9023 14.0744C34.4324 12.6082 32.7034 11.6101 21.0436 12.1473ZM21.1415 33.681C19.9773 33.6286 19.3456 33.4346 18.9241 33.2714C17.8638 32.8593 17.0674 32.0662 16.6578 31.0121C15.9486 29.1956 16.1838 20.5686 16.2471 19.1726C16.3092 17.8053 16.5862 16.5556 17.551 15.5908C18.745 14.3997 20.2877 13.816 30.7918 14.29C32.1625 14.352 33.4151 14.6284 34.3823 15.5908C35.5763 16.7819 36.1686 18.3365 35.6862 28.8001C35.6336 29.9615 35.439 30.5916 35.2754 31.0121C34.1948 33.7813 31.7088 34.1657 21.1415 33.681ZM30.9076 17.6275C30.9076 18.416 31.5488 19.0572 32.3405 19.0572C33.1321 19.0572 33.7745 18.416 33.7745 17.6275C33.7745 16.839 33.1321 16.1984 32.3405 16.1984C31.5488 16.1984 30.9076 16.839 30.9076 17.6275ZM19.8352 23.9855C19.8352 27.3634 22.5803 30.1021 25.9666 30.1021C29.353 30.1021 32.0981 27.3634 32.0981 23.9855C32.0981 20.6076 29.353 17.8707 25.9666 17.8707C22.5803 17.8707 19.8352 20.6076 19.8352 23.9855ZM21.9869 23.9855C21.9869 21.7939 23.7684 20.0158 25.9666 20.0158C28.1649 20.0158 29.9464 21.7939 29.9464 23.9855C29.9464 26.1783 28.1649 27.957 25.9666 27.957C23.7684 27.957 21.9869 26.1783 21.9869 23.9855Z" fill="#FFFEFA"/>
                             </svg>
                         </a>
-                        <a href="#" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 52 52" fill="none">
+                        <a href="#" target="_blank" class="rounded-md hover:bg-mc-primary-dark/25">
+                            <svg width="52" height="52" viewBox="0 0 52 52" fill="none">
                                 <rect x="0.5" y="0.5" width="51" height="51" rx="4.5" stroke="#FFFEFA"/><path d="M17.5009 20.6688H22.1741V33.9999H17.5009V20.6688ZM19.8375 19.193C18.9849 19.193 18.2962 18.9553 17.7714 18.4797C17.2467 18.0042 16.9844 17.4139 16.9844 16.7088C16.9844 16.0037 17.2467 15.4134 17.7714 14.9379C18.2962 14.4624 18.9849 14.2246 19.8375 14.2246C20.6902 14.2246 21.3789 14.4542 21.9036 14.9133C22.4283 15.356 22.6907 15.9299 22.6907 16.635C22.6907 17.3729 22.4283 17.9878 21.9036 18.4797C21.3789 18.9553 20.6902 19.193 19.8375 19.193Z" fill="white"/><path d="M33.8936 20.4474C35.5497 20.4474 36.8779 20.9393 37.8782 21.9232C38.8948 22.907 39.4031 24.391 39.4031 26.3751V33.9999H34.7299V27.1376C34.7299 25.3174 34.0002 24.4074 32.5408 24.4074C31.7374 24.4074 31.0897 24.6697 30.5977 25.1945C30.1222 25.7192 29.8844 26.5063 29.8844 27.5557V33.9999H25.2112V20.6688H29.6631V22.12C30.1878 21.5788 30.8109 21.1689 31.5324 20.8901C32.2539 20.595 33.0409 20.4474 33.8936 20.4474Z" fill="white"/>
                               </svg>
                         </a>
                     </div>
-                    <div>
-                        <a class="mc-btn mc-btn-secondary" href="#" target="_self">Deja tu consulta</a>
+                    <div class="mb-12 md:mb-0">
+                        <a href="./src/pages/contacto.html" class="mc-btn mc-btn-secondary" target="_self">Deja tu consulta</a>
                     </div>
                 </div>
             </div>
 
             <div class="text-white p-4 text-center text-sm"> <!-- copy -->
                 <div>
-                    <p>&copy;2024 Mejor Casero | Developed by <a class="hover:text-mc-primary-950" href="https://agenciabuffalo.com/" target="_blank">Agencia Buffalo</a></p>
+                    <p>&copy;2024 Mejor Casero | Developed by <a class="hover:text-mc-primary-dark" href="https://agenciabuffalo.com/" target="_blank">Agencia Buffalo</a></p>
                 </div>
             </div>
 
         </div>
     </footer>
-    
+
+<script src="./src/js/main.js"></script>
 </body>
 </html>
