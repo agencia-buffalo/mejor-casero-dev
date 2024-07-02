@@ -9,7 +9,8 @@
     <meta name="keywords" content="viandas, unicas, saludables">
     <link rel="stylesheet" href="../output.css">
 </head>
-<body class="bg-[#FFFEFA] text-mc-base font-body">
+<body class="bg-[#FFFEFA] text-mc-base font-body
+bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
       
     <header id="headerContent" class="px-4 py-9">
         <div class="container mx-auto max-w-6xl">
@@ -57,6 +58,48 @@
         
         </div>
     </header>
+
+    <!-- menu mobile -->
+    <div id="menuMobile" class="hidden w-full max-w-full px-4 pb-9 pt-[120px] fixed top-0 z-40 h-[calc(100vh)]"
+    style="background: #FFFEFA radial-gradient(50% 50% at 50% 50%, rgba(255, 75, 0, 0.08) 0%, rgba(255, 75, 0, 0.00) 100%);">
+        <div class="flex flex-col h-full justify-between gap-4">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../../index.html" target="_self" class="block font-semibold text-xl p-4 border-b border-mc-primary hover:text-mc-primary">Home</a>
+                    </li>
+                    <li>
+                        <a href="./plan-ia.html" target="_self" class="block font-semibold text-xl p-4 border-b border-mc-primary hover:text-mc-primary">Generar Plan con IA</a>
+                    </li>
+                    <li>
+                        <a href="./precios.html" target="_self" class="block font-semibold text-xl p-4 border-b border-mc-primary hover:text-mc-primary">Precios</a>
+                    </li>
+                    <li>
+                        <a href="./nutricionistas.html" target="_self" class="block font-semibold text-xl p-4 border-b border-mc-primary hover:text-mc-primary">Nutricionistas</a>
+                    </li>
+                    <li>
+                        <a href="./empresas.html" target="_self" class="block font-semibold text-xl p-4 hover:text-mc-primary">Plan Empresas</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- descarga -->
+            <div class="flex flex-col items-center gap-4">
+                <div class="font-semibold text-lg">Descarga nuestra app</div>
+                <div class="flex gap-4">
+                    <div>
+                        <a href="#" target="_blank" class="hover:drop-shadow-xl">
+                            <img src="../img/btn-google-play.svg" alt="GooglePlay" class="w-full max-w-32">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#" target="_blank" class="hover:drop-shadow-xl">
+                            <img src="../img/btn-app-store.svg" alt="AppStore" class="w-full max-w-32">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <main id="mainContent" class="overflow-hidden">
 
@@ -112,7 +155,7 @@
             <img src="../img/intro-02.png" alt="hoja" class="w-[100px] h-auto rotate-180">
         </div>
 
-        <section id="planFormDatos" class="px-4 py-4 relative mb-10">
+        <section id="planFormDatos" class="px-4 py-4 relative mb-1">
             <div class="container mx-auto max-w-6xl">
 
                 <!-- ingreso de datos para crear plan -->
@@ -219,7 +262,7 @@
                                 </select>
                             </label>
 
-                            <label for=""></label>
+                            <div></div>
 
                             <button type="button" class="mc-btn-form mt-4 bg-mc-primary-light text-mc-primary"> Anterior </button>
                             <button type="submit" class="mc-btn-form mt-4"> Generar Plan IA</button>
@@ -252,17 +295,17 @@
                     <!-- navbar semanas -->
                     <div class="mb-12">
                         <ul class="grid grid-cols-2 gap-4 md:grid-cols-4">
-                            <li class="text-center">
-                                <a href="#" class="w-full bg-transparent border border-mc-primary inline-block rounded-md p-1 text-mc-primary font-semibold hover:bg-mc-primary hover:text-white">Semana 1</a>
+                            <li class="text-center semanaUno">
+                                <a href="#!" class="w-full bg-transparent border border-mc-primary inline-block rounded-md p-1 text-mc-primary font-semibold hover:bg-mc-primary hover:text-white">Semana 1</a>
                             </li>
-                            <li class="text-center">
-                                <a href="#" class="w-full bg-transparent border border-mc-primary inline-block rounded-md p-1 text-mc-primary font-semibold hover:bg-mc-primary hover:text-white">Semana 2</a>
+                            <li class="text-center semanaDos">
+                                <a href="#!" class="w-full bg-transparent border border-mc-primary inline-block rounded-md p-1 text-mc-primary font-semibold hover:bg-mc-primary hover:text-white">Semana 2</a>
                             </li>
-                            <li class="text-center">
-                                <a href="#" class="w-full bg-transparent border border-mc-primary inline-block rounded-md p-1 text-mc-primary font-semibold hover:bg-mc-primary hover:text-white">Semana 3</a>
+                            <li class="text-center semanaTres">
+                                <a href="#!" class="w-full bg-transparent border border-mc-primary inline-block rounded-md p-1 text-mc-primary font-semibold hover:bg-mc-primary hover:text-white">Semana 3</a>
                             </li>
-                            <li class="text-center">
-                                <a href="#" class="w-full bg-transparent border border-mc-primary inline-block rounded-md p-1 text-mc-primary font-semibold hover:bg-mc-primary hover:text-white">Semana 4</a>
+                            <li class="text-center semanaCuatro">
+                                <a href="#!" class="w-full bg-transparent border border-mc-primary inline-block rounded-md p-1 text-mc-primary font-semibold hover:bg-mc-primary hover:text-white">Semana 4</a>
                             </li>
                         </ul>
                     </div>
@@ -271,110 +314,144 @@
                     <div class="grid grid-cols-1 gap-y-10 lg:grid-cols-5 md:gap-3">
 
                         <article class="bg-white rounded-lg shadow-lg p-3 text-left relative">
-                            <div class="text-center bg-mc-secondary-dark text-white rounded -mt-6">
-                                <p><strong>Lunes</strong> - Almuerzo</p>
+                            <div class="flex gap-2 mb-2 lg:flex-col lg:gap-0">
+                                <div class="relative max-w-24 rounded lg:w-full lg:max-w-full">
+                                    <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo"
+                                    class="mx-auto bg-mc-primary-light rounded lg:bg-white">
+                                </div>
+                                <div>
+                                    <div class="text-sm text-left px-2 bg-mc-secondary-dark text-white rounded max-w-fit
+                                    lg:absolute -top-2 lg:max-w-full lg:text-center lg:w-[calc(100%-1.5rem)]">
+                                        <p><strong>Lunes</strong> - Almuerzo</p>
+                                    </div>
+                                    <div class="mt-2 lg:mt-0">
+                                        <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="relative top-2">
-                                <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo" class="mx-auto relative z-10 scale-110">
-                            </div>
-                            <div class="my-4">
-                                <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
-                            </div>
-                            <div class="bg-black/5 flex rounded-md p-2 text-xs gap-1">
-                                <div class="flex-1">
+                            <div class="flex p-1 text-xs gap-1 lg:bg-black/5 lg:rounded-md">
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Kcal: 562</p>
                                     <p>Prote: 31 gr</p>
                                 </div>
-                                <div class="w-px bg-mc-base/25"></div>
-                                <div class="flex-1">
+                                <div class="hidden lg:block border-l border-black/10 pr-1"></div>
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Grasas: 15 gr</p>
                                     <p>Carbo: 61 gr</p>
                                 </div>
                             </div>
                         </article>
+
                         <article class="bg-white rounded-lg shadow-lg p-3 text-left relative">
-                            <div class="text-center bg-mc-secondary-dark text-white rounded -mt-6">
-                                <p><strong>Martes</strong> - Almuerzo</p>
+                            <div class="flex gap-2 mb-2 lg:flex-col lg:gap-0">
+                                <div class="relative max-w-24 rounded lg:w-full lg:max-w-full">
+                                    <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo"
+                                    class="mx-auto bg-mc-primary-light rounded lg:bg-white">
+                                </div>
+                                <div>
+                                    <div class="text-sm text-left px-2 bg-mc-secondary-dark text-white rounded max-w-fit
+                                    lg:absolute -top-2 lg:max-w-full lg:text-center lg:w-[calc(100%-1.5rem)]">
+                                        <p><strong>Martes</strong> - Almuerzo</p>
+                                    </div>
+                                    <div class="mt-2 lg:mt-0">
+                                        <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="relative top-2">
-                                <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo" class="mx-auto relative z-10 scale-110">
-                            </div>
-                            <div class="my-4">
-                                <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
-                            </div>
-                            <div class="bg-black/5 flex rounded-md p-2 text-xs gap-1">
-                                <div class="flex-1">
+                            <div class="flex p-1 text-xs gap-1 lg:bg-black/5 lg:rounded-md">
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Kcal: 562</p>
                                     <p>Prote: 31 gr</p>
                                 </div>
-                                <div class="w-px bg-mc-base/25"></div>
-                                <div class="flex-1">
+                                <div class="hidden lg:block border-l border-black/10 pr-1"></div>
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Grasas: 15 gr</p>
                                     <p>Carbo: 61 gr</p>
                                 </div>
                             </div>
                         </article>
+
                         <article class="bg-white rounded-lg shadow-lg p-3 text-left relative">
-                            <div class="text-center bg-mc-secondary-dark text-white rounded -mt-6">
-                                <p><strong>Miércoles</strong> - Almuerzo</p>
+                            <div class="flex gap-2 mb-2 lg:flex-col lg:gap-0">
+                                <div class="relative max-w-24 rounded lg:w-full lg:max-w-full">
+                                    <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo"
+                                    class="mx-auto bg-mc-primary-light rounded lg:bg-white">
+                                </div>
+                                <div>
+                                    <div class="text-sm text-left px-2 bg-mc-secondary-dark text-white rounded max-w-fit
+                                    lg:absolute -top-2 lg:max-w-full lg:text-center lg:w-[calc(100%-1.5rem)]">
+                                        <p><strong>Miércoles</strong> - Almuerzo</p>
+                                    </div>
+                                    <div class="mt-2 lg:mt-0">
+                                        <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="relative top-2">
-                                <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo" class="mx-auto relative z-10 scale-110">
-                            </div>
-                            <div class="my-4">
-                                <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
-                            </div>
-                            <div class="bg-black/5 flex rounded-md p-2 text-xs gap-1">
-                                <div class="flex-1">
+                            <div class="flex p-1 text-xs gap-1 lg:bg-black/5 lg:rounded-md">
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Kcal: 562</p>
                                     <p>Prote: 31 gr</p>
                                 </div>
-                                <div class="w-px bg-mc-base/25"></div>
-                                <div class="flex-1">
+                                <div class="hidden lg:block border-l border-black/10 pr-1"></div>
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Grasas: 15 gr</p>
                                     <p>Carbo: 61 gr</p>
                                 </div>
                             </div>
                         </article>
+
                         <article class="bg-white rounded-lg shadow-lg p-3 text-left relative">
-                            <div class="text-center bg-mc-secondary-dark text-white rounded -mt-6">
-                                <p><strong>Jueves</strong> - Almuerzo</p>
+                            <div class="flex gap-2 mb-2 lg:flex-col lg:gap-0">
+                                <div class="relative max-w-24 rounded lg:w-full lg:max-w-full">
+                                    <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo"
+                                    class="mx-auto bg-mc-primary-light rounded lg:bg-white">
+                                </div>
+                                <div>
+                                    <div class="text-sm text-left px-2 bg-mc-secondary-dark text-white rounded max-w-fit
+                                    lg:absolute -top-2 lg:max-w-full lg:text-center lg:w-[calc(100%-1.5rem)]">
+                                        <p><strong>Jueves</strong> - Almuerzo</p>
+                                    </div>
+                                    <div class="mt-2 lg:mt-0">
+                                        <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="relative top-2">
-                                <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo" class="mx-auto relative z-10 scale-110">
-                            </div>
-                            <div class="my-4">
-                                <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
-                            </div>
-                            <div class="bg-black/5 flex rounded-md p-2 text-xs gap-1">
-                                <div class="flex-1">
+                            <div class="flex p-1 text-xs gap-1 lg:bg-black/5 lg:rounded-md">
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Kcal: 562</p>
                                     <p>Prote: 31 gr</p>
                                 </div>
-                                <div class="w-px bg-mc-base/25"></div>
-                                <div class="flex-1">
+                                <div class="hidden lg:block border-l border-black/10 pr-1"></div>
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Grasas: 15 gr</p>
                                     <p>Carbo: 61 gr</p>
                                 </div>
                             </div>
                         </article>
+
                         <article class="bg-white rounded-lg shadow-lg p-3 text-left relative">
-                            <div class="text-center bg-mc-secondary-dark text-white rounded -mt-6">
-                                <p><strong>Viernes</strong> - Almuerzo</p>
+                            <div class="flex gap-2 mb-2 lg:flex-col lg:gap-0">
+                                <div class="relative max-w-24 rounded lg:w-full lg:max-w-full">
+                                    <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo"
+                                    class="mx-auto bg-mc-primary-light rounded lg:bg-white">
+                                </div>
+                                <div>
+                                    <div class="text-sm text-left px-2 bg-mc-secondary-dark text-white rounded max-w-fit
+                                    lg:absolute -top-2 lg:max-w-full lg:text-center lg:w-[calc(100%-1.5rem)]">
+                                        <p><strong>Viernes</strong> - Almuerzo</p>
+                                    </div>
+                                    <div class="mt-2 lg:mt-0">
+                                        <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="relative top-2">
-                                <img src="../img/plan-ia-img-menu.svg" alt="Pollo relleno con papas, garbanzos y huevo" class="mx-auto relative z-10 scale-110">
-                            </div>
-                            <div class="my-4">
-                                <h3 class="text-base text-mc-base leading-tight font-medium">Pollo relleno con papas, garbanzos y huevo</h3>
-                            </div>
-                            <div class="bg-black/5 flex rounded-md p-2 text-xs gap-1">
-                                <div class="flex-1">
+                            <div class="flex p-1 text-xs gap-1 lg:bg-black/5 lg:rounded-md">
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Kcal: 562</p>
                                     <p>Prote: 31 gr</p>
                                 </div>
-                                <div class="w-px bg-mc-base/25"></div>
-                                <div class="flex-1">
+                                <div class="hidden lg:block border-l border-black/10 pr-1"></div>
+                                <div class="flex-auto flex gap-1 justify-around lg:flex-col lg:flex-1">
                                     <p>Grasas: 15 gr</p>
                                     <p>Carbo: 61 gr</p>
                                 </div>
@@ -384,12 +461,19 @@
                     </div>
 
                     <!-- botones -->
+                    <div class="md:hidden flex justify-center items-center mt-10 mb-4 gap-4">
+                        <a href="#!" class="mc-btn mc-btn-secondary w-full">Almuerzo</a>
+                        <a href="#!" class="mc-btn mc-btn-secondary-outline w-full">Cena</a>
+                    </div>
+                    <div class="md:hidden">
+                        <a href="#!" class="mc-btn mc-btn-primary w-full">Descargar plan nutricional</a>
+                    </div>
                     <div class="hidden md:flex justify-center items-center mt-10 gap-4">
                         <div>
                             <h2 class="font-semibold text-mc-base text-xl">Accede a nuestro menú</h2>
                         </div>
                         <div>
-                            <a href="#" class="mc-btn mc-btn-primary">Contactar ahora</a>
+                            <a href="./contacto.html" class="mc-btn mc-btn-primary">Contactar ahora</a>
                         </div>
                     </div>
 
@@ -409,12 +493,12 @@
                         <p class="text-white text-lg font-normal leading-tight">Desde la App podés cancelar tus platos y cambiar tu dirección de entrega</p>
                         <div class="lg:flex gap-5">
                             <div class="mb-4">
-                                <a href="#" target="_blank">
+                                <a href="#" target="_blank" class="hover:drop-shadow-xl">
                                     <img src="../img/btn-google-play.svg" alt="icon google play" class="w-full h-auto">
                                 </a>
                             </div>
                             <div class="mb-4">
-                                <a href="#" target="_blank">
+                                <a href="#" target="_blank" class="hover:drop-shadow-xl">
                                     <img src="../img/btn-app-store.svg" alt="icon app store" class="w-full h-auto">
                                 </a>
                             </div>
@@ -547,5 +631,6 @@
         </div>
     </footer>
 
+<script src="../js/main.js"></script>
 </body>
 </html>
