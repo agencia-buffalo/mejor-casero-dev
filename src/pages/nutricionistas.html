@@ -158,7 +158,7 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
             <img src="../img/intro-02.png" alt="hoja" class="w-[100px] h-auto rotate-180">
         </div>
 
-        <section id="nutriFiltros" class="px-4 py-4 relative mb-10">
+        <section id="nutriFiltros" class="px-4 py-4 relative mb-20">
             <div class="container mx-auto max-w-6xl">
 
                 <!-- bloque titulo -->
@@ -204,10 +204,11 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                 </div>
 
                 <!-- display items -->
-                <div class="container mx-auto grid gap-4 md:grid-cols-4">
+                <div class="container mx-auto grid items-start gap-4 md:grid-cols-2 lg:grid-cols-4">
 
-                    <article class="bg-white rounded-xl p-6 shadow-lg">
-                        <div class="flex gap-4 md:flex-col md:border-b border-b-gray-200 md:mb-2">
+                    <article class="accordionItem bg-white rounded-xl p-6 shadow-lg">
+                        <!-- img + nombre -->
+                        <div class="accordionHeader cursor-pointer flex gap-4 md:flex-col md:cursor-default">
                             <div class="rounded-md overflow-hidden w-14 h-14 bg-mc-primary md:w-full md:h-auto">
                                 <img src="../img/nutricionistas-img-perfil.png" alt="img perfil" class="w-full h-full object-cover">
                             </div>
@@ -215,9 +216,11 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                                 <h3 class="font-semibold text-xl">Verónica Rodriguez</h3>
                                 <p class="text-mc-primary text-sm">Nutrición Deportiva y Clínica</p>
                             </div>
+                            <div class="md:hidden">+</div>
                         </div>
-                        <div class="hidden md:block">
-                            <div class="mb-6 text-sm">
+                        <!-- info + btn -->
+                        <div class="accordionContent max-h-0 overflow-hidden md:max-h-max">
+                            <div class="mb-6 text-sm pt-2 border-t border-t-gray-200 mt-3">
                                 <p><strong>Piedras 237, Montevideo</strong></p>
                                 <p><strong>Consulta:</strong> Virtual / Presencial</p>
                                 <p><strong>Servicios:</strong> Asesoramiento nutricional</p>
@@ -230,8 +233,9 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                         </div>
                     </article>
 
-                    <article class="bg-white rounded-xl p-6 shadow-lg">
-                        <div class="flex gap-4 md:flex-col md:border-b border-b-gray-200 md:mb-2">
+                    <article class="accordionItem bg-white rounded-xl p-6 shadow-lg">
+                        <!-- img + nombre -->
+                        <div class="accordionHeader cursor-pointer flex gap-4 md:flex-col md:cursor-default">
                             <div class="rounded-md overflow-hidden w-14 h-14 bg-mc-primary md:w-full md:h-auto">
                                 <img src="../img/nutricionistas-img-perfil.png" alt="img perfil" class="w-full h-full object-cover">
                             </div>
@@ -239,9 +243,11 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                                 <h3 class="font-semibold text-xl">Verónica Rodriguez</h3>
                                 <p class="text-mc-primary text-sm">Nutrición Deportiva y Clínica</p>
                             </div>
+                            <div class="md:hidden">+</div>
                         </div>
-                        <div class="hidden md:block">
-                            <div class="mb-6 text-sm">
+                        <!-- info + btn -->
+                        <div class="accordionContent max-h-0 overflow-hidden md:max-h-max">
+                            <div class="mb-6 text-sm pt-2 border-t border-t-gray-200 mt-3">
                                 <p><strong>Piedras 237, Montevideo</strong></p>
                                 <p><strong>Consulta:</strong> Virtual / Presencial</p>
                                 <p><strong>Servicios:</strong> Asesoramiento nutricional</p>
@@ -254,8 +260,9 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                         </div>
                     </article>
 
-                    <article class="bg-white rounded-xl p-6 shadow-lg">
-                        <div class="flex gap-4 md:flex-col md:border-b border-b-gray-200 md:mb-2">
+                    <article class="accordionItem bg-white rounded-xl p-6 shadow-lg">
+                        <!-- img + nombre -->
+                        <div class="accordionHeader cursor-pointer flex gap-4 md:flex-col md:cursor-default">
                             <div class="rounded-md overflow-hidden w-14 h-14 bg-mc-primary md:w-full md:h-auto">
                                 <img src="../img/nutricionistas-img-perfil.png" alt="img perfil" class="w-full h-full object-cover">
                             </div>
@@ -263,9 +270,11 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                                 <h3 class="font-semibold text-xl">Verónica Rodriguez</h3>
                                 <p class="text-mc-primary text-sm">Nutrición Deportiva y Clínica</p>
                             </div>
+                            <div class="md:hidden">+</div>
                         </div>
-                        <div class="hidden md:block">
-                            <div class="mb-6 text-sm">
+                        <!-- info + btn -->
+                        <div class="accordionContent max-h-0 overflow-hidden md:max-h-max">
+                            <div class="mb-6 text-sm pt-2 border-t border-t-gray-200 mt-3">
                                 <p><strong>Piedras 237, Montevideo</strong></p>
                                 <p><strong>Consulta:</strong> Virtual / Presencial</p>
                                 <p><strong>Servicios:</strong> Asesoramiento nutricional</p>
@@ -278,8 +287,9 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                         </div>
                     </article>
 
-                    <article class="bg-white rounded-xl p-6 shadow-lg">
-                        <div class="flex gap-4 md:flex-col md:border-b border-b-gray-200 md:mb-2">
+                    <article class="accordionItem bg-white rounded-xl p-6 shadow-lg">
+                        <!-- img + nombre -->
+                        <div class="accordionHeader cursor-pointer flex gap-4 md:flex-col md:cursor-default">
                             <div class="rounded-md overflow-hidden w-14 h-14 bg-mc-primary md:w-full md:h-auto">
                                 <img src="../img/nutricionistas-img-perfil.png" alt="img perfil" class="w-full h-full object-cover">
                             </div>
@@ -287,9 +297,11 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                                 <h3 class="font-semibold text-xl">Verónica Rodriguez</h3>
                                 <p class="text-mc-primary text-sm">Nutrición Deportiva y Clínica</p>
                             </div>
+                            <div class="md:hidden">+</div>
                         </div>
-                        <div class="hidden md:block">
-                            <div class="mb-6 text-sm">
+                        <!-- info + btn -->
+                        <div class="accordionContent max-h-0 overflow-hidden md:max-h-max">
+                            <div class="mb-6 text-sm pt-2 border-t border-t-gray-200 mt-3">
                                 <p><strong>Piedras 237, Montevideo</strong></p>
                                 <p><strong>Consulta:</strong> Virtual / Presencial</p>
                                 <p><strong>Servicios:</strong> Asesoramiento nutricional</p>

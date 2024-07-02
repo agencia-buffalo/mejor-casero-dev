@@ -73,10 +73,10 @@ introDots.forEach(dot => {
         introDots.forEach(d => d.style.opacity = '0.5'); // Inactivo
         dot.style.opacity = '1'; // Activo
     });
+    // Inicializar la opacidad de los dots
+    document.querySelector('#introDot1').classList.add('opacity-100');
+    document.querySelector('#introDot2').classList.add('opacity-50');
 });
-// Inicializar la opacidad de los dots
-document.querySelector('#introDot1').classList.add('opacity-100');
-document.querySelector('#introDot2').classList.add('opacity-50');
 
 // Accordion
 accordionHeaders.forEach(header => {
