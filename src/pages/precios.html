@@ -186,7 +186,7 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
             </div>
         </section>
 
-        <section id="preciosPlanes" class="px-4 py-4 relative mb-20">
+        <section id="preciosPlanes" class="px-4 py-4 relative mb-1">
             <div class="container mx-auto max-w-6xl">
 
                 <!-- bloque titulo -->
@@ -200,8 +200,9 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                 <div class="container mx-auto grid gap-4 items-start md:grid-cols-2">
 
                     <!-- Plan de Ganancia de Masa Muscular -->
-                    <article class="bg-white rounded-xl p-6 shadow-lg">
-                        <div class="flex justify-between gap-4">
+                    <article class="accordionItem bg-white rounded-xl p-6 shadow-lg">
+                        <div class="accordionHeader flex justify-between gap-4 cursor-pointer">
+                            <!-- titulo + precio -->
                             <div class="relative">
                                 <h3 class="font-bold text-mc-base/80 text-xl leading-none mb-2">Plan de Ganancia de Masa Muscular</h3>
                                 <div class="relative">
@@ -220,48 +221,10 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="infoAccordion my-4 hidden">
-                                    <p class="mb-4">Este tipo de plan nutricional se centra en aumentar la ingesta calórica y proteica para promover el crecimiento muscular y el aumento de peso en aquellos que buscan ganar masa muscular.</p>
-                                    <div class="flex flex-col gap-4 lg:flex-row mb-7">
-                                        <div>
-                                            <a href="./plan-ia.html" class="mc-btn mc-btn-primary">Generar plan con IA</a>
-                                        </div>
-                                        <div>
-                                            <a href="./contacto.html" class="mc-btn mc-btn-primary-outline">Contactar</a>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div>
-                                            <h3 class="text-xl text-mc-base font-semibold leading-none">Mensual 20 platos</h3>
-                                            <p class="text-mc-base text-xs">Almuerzo <span class="font-semibold">desde $490</span></p>
-                                        </div>
-                                        <div class="font-bold text-mc-base text-xl">$9.800</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div>
-                                            <h3 class="text-xl text-mc-base font-semibold leading-none">Mensual 40 platos</h3>
-                                            <p class="text-mc-base text-xs">Almuerzo y Cena <span class="font-semibold">desde $450</span></p>
-                                        </div>
-                                        <div class="font-bold text-mc-base text-xl">$18.000</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div>
-                                            <h3 class="text-xl text-mc-base font-semibold leading-none">Semanal 5 platos</h3>
-                                            <p class="text-mc-base text-xs">Almuerzo <span class="font-semibold">desde $550</span></p>
-                                        </div>
-                                        <div class="font-bold text-mc-base text-xl">$2.750</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div>
-                                            <h3 class="text-xl text-mc-base font-semibold leading-none">Semanal 10 platos</h3>
-                                            <p class="text-mc-base text-xs">Almuerzo y Cena <span class="font-semibold">desde $515</span></p>
-                                        </div>
-                                        <div class="font-bold text-mc-base text-xl">$5.150</div>
-                                    </div>
-                                </div>
                             </div>
+                            <!-- icon btn -->
                             <div class="flex-auto w-full h-full max-w-9 max-h-9">
-                                <button type="button" class="btnAccordion flex h-9 w-9 items-center justify-center">
+                                <button type="button" class="flex h-9 w-9 items-center justify-center">
                                     <svg class="iconOpen" viewBox="0 0 37 37" fill="none">
                                         <circle cx="18.5" cy="18.5" r="18.5" fill="#FF6F4E"/>
                                         <path d="M25.328 20.176H20.456V24.936H16.844V20.176H12V16.76H16.844V12H20.456V16.76H25.328V20.176Z" fill="#FFFEFA"/>
@@ -273,10 +236,54 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                                 </button>
                             </div>
                         </div>
+                        <div class="accordionContent max-h-0 overflow-hidden">
+                            <p class="my-4">Este tipo de plan nutricional se centra en aumentar la ingesta calórica y proteica para promover el crecimiento muscular y el aumento de peso en aquellos que buscan ganar masa muscular.</p>
+                            <!-- botones -->
+                            <div class="flex flex-col gap-4 lg:flex-row mb-7">
+                                <div>
+                                    <a href="./plan-ia.html" class="mc-btn mc-btn-primary">Generar plan con IA</a>
+                                </div>
+                                <div>
+                                    <a href="./contacto.html" class="mc-btn mc-btn-primary-outline">Contactar</a>
+                                </div>
+                            </div>
+                            <!-- planes -->
+                            <div>
+                                <div class="flex justify-between mb-3">
+                                    <div>
+                                        <h3 class="text-xl text-mc-base font-semibold leading-none">Mensual 20 platos</h3>
+                                        <p class="text-mc-base text-xs">Almuerzo <span class="font-semibold">desde $490</span></p>
+                                    </div>
+                                    <div class="font-bold text-mc-base text-xl">$9.800</div>
+                                </div>
+                                <div class="flex justify-between mb-3">
+                                    <div>
+                                        <h3 class="text-xl text-mc-base font-semibold leading-none">Mensual 40 platos</h3>
+                                        <p class="text-mc-base text-xs">Almuerzo y Cena <span class="font-semibold">desde $450</span></p>
+                                    </div>
+                                    <div class="font-bold text-mc-base text-xl">$18.000</div>
+                                </div>
+                                <div class="flex justify-between mb-3">
+                                    <div>
+                                        <h3 class="text-xl text-mc-base font-semibold leading-none">Semanal 5 platos</h3>
+                                        <p class="text-mc-base text-xs">Almuerzo <span class="font-semibold">desde $550</span></p>
+                                    </div>
+                                    <div class="font-bold text-mc-base text-xl">$2.750</div>
+                                </div>
+                                <div class="flex justify-between mb-3">
+                                    <div>
+                                        <h3 class="text-xl text-mc-base font-semibold leading-none">Semanal 10 platos</h3>
+                                        <p class="text-mc-base text-xs">Almuerzo y Cena <span class="font-semibold">desde $515</span></p>
+                                    </div>
+                                    <div class="font-bold text-mc-base text-xl">$5.150</div>
+                                </div>
+                            </div>
+                        </div>
                     </article>
                     <!-- Plan para Deportistas o Atletas -->
-                    <article class="bg-white rounded-xl p-6 shadow-lg">
-                        <div class="flex justify-between gap-4">
+                    <article class="accordionItem bg-white rounded-xl p-6 shadow-lg">
+                        <div class="accordionHeader flex justify-between gap-4 cursor-pointer">
+                            <!-- titulo + precio -->
                             <div class="relative">
                                 <h3 class="font-bold text-mc-base/80 text-xl leading-none mb-2">Plan para Deportistas o Atletas</h3>
                                 <div class="relative">
@@ -295,48 +302,10 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                                         </svg>
                                     </div>
                                 </div>
-                                <div class="infoAccordion my-4 hidden">
-                                    <p class="mb-4">Este tipo de plan nutricional se centra en aumentar la ingesta calórica y proteica para promover el crecimiento muscular y el aumento de peso en aquellos que buscan ganar masa muscular.</p>
-                                    <div class="flex flex-col gap-4 lg:flex-row mb-7">
-                                        <div>
-                                            <a href="./plan-ia.html" class="mc-btn mc-btn-primary">Generar plan con IA</a>
-                                        </div>
-                                        <div>
-                                            <a href="./contacto.html" class="mc-btn mc-btn-primary-outline">Contactar</a>
-                                        </div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div>
-                                            <h3 class="text-xl text-mc-base font-semibold leading-none">Mensual 20 platos</h3>
-                                            <p class="text-mc-base text-xs">Almuerzo <span class="font-semibold">desde $490</span></p>
-                                        </div>
-                                        <div class="font-bold text-mc-base text-xl">$9.800</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div>
-                                            <h3 class="text-xl text-mc-base font-semibold leading-none">Mensual 40 platos</h3>
-                                            <p class="text-mc-base text-xs">Almuerzo y Cena <span class="font-semibold">desde $450</span></p>
-                                        </div>
-                                        <div class="font-bold text-mc-base text-xl">$18.000</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div>
-                                            <h3 class="text-xl text-mc-base font-semibold leading-none">Semanal 5 platos</h3>
-                                            <p class="text-mc-base text-xs">Almuerzo <span class="font-semibold">desde $550</span></p>
-                                        </div>
-                                        <div class="font-bold text-mc-base text-xl">$2.750</div>
-                                    </div>
-                                    <div class="flex justify-between mb-2">
-                                        <div>
-                                            <h3 class="text-xl text-mc-base font-semibold leading-none">Semanal 10 platos</h3>
-                                            <p class="text-mc-base text-xs">Almuerzo y Cena <span class="font-semibold">desde $515</span></p>
-                                        </div>
-                                        <div class="font-bold text-mc-base text-xl">$5.150</div>
-                                    </div>
-                                </div>
                             </div>
+                            <!-- icon btn -->
                             <div class="flex-auto w-full h-full max-w-9 max-h-9">
-                                <button type="button" class="btnAccordion flex h-9 w-9 items-center justify-center">
+                                <button type="button" class="flex h-9 w-9 items-center justify-center">
                                     <svg class="iconOpen" viewBox="0 0 37 37" fill="none">
                                         <circle cx="18.5" cy="18.5" r="18.5" fill="#FF6F4E"/>
                                         <path d="M25.328 20.176H20.456V24.936H16.844V20.176H12V16.76H16.844V12H20.456V16.76H25.328V20.176Z" fill="#FFFEFA"/>
@@ -348,12 +317,59 @@ bg-[url('./img/home-bg-blur.svg')] bg-no-repeat bg-cover bg-left-top">
                                 </button>
                             </div>
                         </div>
+                        <div class="accordionContent max-h-0 overflow-hidden">
+                            <p class="my-4">Estos planes están diseñados específicamente para satisfacer las necesidades nutricionales de personas activas y atléticas, proporcionando la energía y los nutrientes necesarios para el rendimiento óptimo y la recuperación.</p>
+                            <!-- botones -->
+                            <div class="flex flex-col gap-4 lg:flex-row mb-7">
+                                <div>
+                                    <a href="./plan-ia.html" class="mc-btn mc-btn-primary">Generar plan con IA</a>
+                                </div>
+                                <div>
+                                    <a href="./contacto.html" class="mc-btn mc-btn-primary-outline">Contactar</a>
+                                </div>
+                            </div>
+                            <!-- planes -->
+                            <div>
+                                <div class="flex justify-between mb-3">
+                                    <div>
+                                        <h3 class="text-xl text-mc-base font-semibold leading-none">Mensual 20 platos</h3>
+                                        <p class="text-mc-base text-xs">Almuerzo <span class="font-semibold">desde $455</span></p>
+                                    </div>
+                                    <div class="font-bold text-mc-base text-xl">$9.100</div>
+                                </div>
+                                <div class="flex justify-between mb-3">
+                                    <div>
+                                        <h3 class="text-xl text-mc-base font-semibold leading-none">Mensual 40 platos</h3>
+                                        <p class="text-mc-base text-xs">Almuerzo y Cena <span class="font-semibold">desde $419</span></p>
+                                    </div>
+                                    <div class="font-bold text-mc-base text-xl">$16.760</div>
+                                </div>
+                                <div class="flex justify-between mb-3">
+                                    <div>
+                                        <h3 class="text-xl text-mc-base font-semibold leading-none">Semanal 5 platos</h3>
+                                        <p class="text-mc-base text-xs">Almuerzo <span class="font-semibold">desde $520</span></p>
+                                    </div>
+                                    <div class="font-bold text-mc-base text-xl">$2.600</div>
+                                </div>
+                                <div class="flex justify-between mb-3">
+                                    <div>
+                                        <h3 class="text-xl text-mc-base font-semibold leading-none">Semanal 10 platos</h3>
+                                        <p class="text-mc-base text-xs">Almuerzo y Cena <span class="font-semibold">desde $480</span></p>
+                                    </div>
+                                    <div class="font-bold text-mc-base text-xl">$4.800</div>
+                                </div>
+                            </div>
+                        </div>
                     </article>
 
                 </div>
 
             </div>
         </section>
+
+        <div class="mx-auto max-w-6xl container flex justify-center">
+            <img src="../img/intro-03.png" alt="hoja" class="max-h-36 h-auto pr-64 relative top-16 z-10">
+        </div>
 
         <section id="usamosIA" class="px-4 py-4 mb-20">
             <div class="mx-auto max-w-6xl bg-mc-primary rounded-xl px-5 py-10 md:flex flex-row-reverse items-center md:pl-24 md:pr-16 gap-14 relative mb-6">

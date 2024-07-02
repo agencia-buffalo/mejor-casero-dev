@@ -1,9 +1,15 @@
-// Menu mobile open/close
 const btnMenuMobileOpen = document.getElementById('btnMenuMobileOpen');
 const menuMobile = document.getElementById('menuMobile');
 const navBarMobile = document.querySelectorAll('#logo, .iconMenuMobile');
 const iconsOpenClose = document.querySelectorAll('.iconOpen, .iconClose');
 
+const introSlide1 = document.querySelector('#introSlide1');
+const introSlide2 = document.querySelector('#introSlide2');
+const introDots = document.querySelectorAll('#introDot1, #introDot2');
+
+const accordionHeaders = document.querySelectorAll('.accordionHeader');
+
+// Menu mobile open/close
 btnMenuMobileOpen.addEventListener('click', function() {
     menuMobile.classList.toggle('hidden');
     navBarMobile.forEach(element => {
@@ -14,7 +20,7 @@ btnMenuMobileOpen.addEventListener('click', function() {
     });
 });
 
-// Contador
+// Counter
 function animateCount(element, start, end, duration) {
     var startTime = null;
     function updateCounter(timestamp) {
@@ -50,10 +56,6 @@ function createObserver() {
 window.addEventListener('DOMContentLoaded', createObserver);
 
 // Slide intro precios
-const introSlide1 = document.querySelector('#introSlide1');
-const introSlide2 = document.querySelector('#introSlide2');
-const introDots = document.querySelectorAll('#introDot1, #introDot2');
-
 introDots.forEach(dot => {
     dot.addEventListener('click', function() {
         if (dot.id === 'introDot1') {
@@ -72,17 +74,21 @@ introDots.forEach(dot => {
         dot.style.opacity = '1'; // Activo
     });
 });
-
 // Inicializar la opacidad de los dots
 document.querySelector('#introDot1').classList.add('opacity-100');
 document.querySelector('#introDot2').classList.add('opacity-50');
 
 // Accordion
-const btnAccordion = document.querySelector('.btnAccordion');
-const infoAccordion = document.querySelector('.infoAccordion');
-btnAccordion.addEventListener('click', function() {
-    infoAccordion.classList.toggle('hidden');
-    iconsOpenClose.forEach(element => {
-        element.classList.toggle('hidden');
+accordionHeaders.forEach(header => {
+    header.addEventListener('click', function() {
+        const content = this.nextElementSibling;
+        // Mostrar ocultar class open
+        content.classList.toggle('open');
+        // Ajustar altura
+        if (content.classList.contains('open')) {
+            content.style.maxHeight = content.scrollHeight + 'px';
+        } else {
+            content.style.maxHeight = '0';
+        }
     });
 });
